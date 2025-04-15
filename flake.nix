@@ -1,5 +1,5 @@
 {
-  description = "Zed Editor overlay and development environment";
+  description = "Zed Editor overlay and installation";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -13,13 +13,6 @@
           inherit system;
           overlays = [ self.overlays.default ];
         };
-        python = pkgs.python312;  # Using Python 3.12 which is the most recent stable version
-        pythonEnv = python.withPackages (ps: with ps; [
-          # Add Python packages you need here, for example:
-          # numpy
-          # pandas
-          # requests
-        ]);
       in
       {
         packages = {
@@ -37,12 +30,10 @@
 
         devShells.default = pkgs.mkShell {
           buildInputs = [
-            pythonEnv
             pkgs.zed-editor
           ];
           shellHook = ''
             echo "Zed Editor development environment loaded."
-            echo "Python version: $(python --version)"
             echo "Zed Editor version: $(zeditor --version)"
           '';
         };

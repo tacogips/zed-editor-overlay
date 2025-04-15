@@ -23,12 +23,10 @@
 , makeFontsConf
 , vulkan-loader
 , envsubst
-, nix-update-script
 , cargo-about
 , versionCheckHook
 , buildFHSEnv
 , cargo-bundle
-, git
 , makeBinaryWrapper
 , nodejs
 , libGL
@@ -251,9 +249,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://zed.dev";
     changelog = "https://github.com/zed-industries/zed/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = with lib.maintainers; [
-      # Your name could go here
-    ];
+    maintainers = [];
     mainProgram = "zeditor";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

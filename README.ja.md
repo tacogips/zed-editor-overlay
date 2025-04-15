@@ -73,7 +73,7 @@ Zed Editorの最新バージョンに更新するには：
 
 ## 開発シェル
 
-このflakeはZed EditorとPythonを含む開発シェルも提供します：
+このflakeはZed Editorを含む開発シェルも提供します：
 
 ```bash
 nix develop

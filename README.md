@@ -73,7 +73,7 @@ To update to the latest version of Zed Editor:
 
 ## Development Shell
 
-This flake also provides a development shell with Zed Editor and Python:
+This flake also provides a development shell with Zed Editor:
 
 ```bash
 nix develop
