@@ -8,4 +8,3 @@ index 1234567..abcdefg 100644
  [target.x86_64-unknown-linux-gnu]
 -rustflags = ["--cfg", "tokio_unstable", "-C", "link-arg=-fuse-ld=lld"]
 +rustflags = ["--cfg", "tokio_unstable"]
- 
