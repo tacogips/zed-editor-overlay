@@ -5,7 +5,7 @@ This repository contains a Nix flake that provides an overlay for the latest ver
 ## Features
 
 - Custom overlay for Zed Editor
-- Up-to-date version (currently 0.182.0)
+- Up-to-date version (currently 0.181.8)
 - Supports both Linux and macOS
 - Includes FHS environment option for extensions
 - Can be installed as a standalone package

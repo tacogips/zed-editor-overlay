@@ -86,7 +86,7 @@ let
 in
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "zed-editor";
-  version = "0.182.0"; # Updated to the latest version
+  version = "0.181.8"; # Updated to the latest version
   outputs =
     [ "out" ]
     ++ lib.optionals buildRemoteServer [
@@ -96,7 +96,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     owner = "zed-industries";
     repo = "zed";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-fvljQcRGkl8cqJWm/1pDLp+P1Gg+GCE5PNmyRF1OFY4="; # Update this hash when version changes
+    hash = "sha256-0zmald4j2jvjr5dg3q40f1ln7qwxaph588wgnr4csy0z95by4il2="; # Updated hash for v0.181.8
   };
   patches = [
     # Upstream delegates linking on Linux to clang to make use of mold,
@@ -111,7 +111,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
         --replace-fail "cargo:rustc-link-lib=static=webrtc" "cargo:rustc-link-lib=dylib=webrtc"
     '';
   useFetchCargoVendor = true;
-  cargoHash = "sha256-hNGz1yFbGkvKMGVgaBrqxJ3Ksh+26Uaw3BOwL8Vb2Ms="; # Update this hash when version changes
+  cargoHash = "sha256-ZDvFWr0e3Sll7KbSjCTDg+5jL/nzCpcyqnT71AEhSM0="; # Updated hash for v0.181.8
   nativeBuildInputs =
     [
       cmake
