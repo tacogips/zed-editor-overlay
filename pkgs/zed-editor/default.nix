@@ -1,42 +1,43 @@
-{ lib
-, rustPlatform
-, fetchFromGitHub
-, cmake
-, copyDesktopItems
-, curl
-, perl
-, pkg-config
-, protobuf
-, fontconfig
-, freetype
-, libgit2
-, openssl
-, sqlite
-, zlib
-, zstd
-, alsa-lib
-, libxkbcommon
-, wayland
-, libglvnd
-, xorg
-, stdenv
-, makeFontsConf
-, vulkan-loader
-, envsubst
-, cargo-about
-, versionCheckHook
-, buildFHSEnv
-, cargo-bundle
-, makeBinaryWrapper
-, nodejs
-, libGL
-, libX11
-, libXext
-, livekit-libwebrtc
-, testers
-, writableTmpDirAsHomeHook
-, withGLES ? false
-, buildRemoteServer ? true
+{
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
+  cmake,
+  copyDesktopItems,
+  curl,
+  perl,
+  pkg-config,
+  protobuf,
+  fontconfig,
+  freetype,
+  libgit2,
+  openssl,
+  sqlite,
+  zlib,
+  zstd,
+  alsa-lib,
+  libxkbcommon,
+  wayland,
+  libglvnd,
+  xorg,
+  stdenv,
+  makeFontsConf,
+  vulkan-loader,
+  envsubst,
+  cargo-about,
+  versionCheckHook,
+  buildFHSEnv,
+  cargo-bundle,
+  makeBinaryWrapper,
+  nodejs,
+  libGL,
+  libX11,
+  libXext,
+  livekit-libwebrtc,
+  testers,
+  writableTmpDirAsHomeHook,
+  withGLES ? false,
+  buildRemoteServer ? true,
 }:
 
 assert withGLES -> stdenv.hostPlatform.isLinux;
@@ -111,7 +112,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
         --replace-fail "cargo:rustc-link-lib=static=webrtc" "cargo:rustc-link-lib=dylib=webrtc"
     '';
   useFetchCargoVendor = true;
-  cargoHash = "sha256-ZDvFWr0e3Sll7KbSjCTDg+5jL/nzCpcyqnT71AEhSM0="; # Updated hash for v0.181.8
+  cargoHash = "sha256-PMLu2PeyRNu6VbHByL+clUoY/P8Rlrc+SvP5gDKrN/E="; # Updated hash for v0.181.8
   nativeBuildInputs =
     [
       cmake
@@ -249,7 +250,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://zed.dev";
     changelog = "https://github.com/zed-industries/zed/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [];
+    maintainers = [ ];
     mainProgram = "zeditor";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
