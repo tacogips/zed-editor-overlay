@@ -17,13 +17,13 @@
 このflakeを使用してZed Editorを直接インストールする：
 
 ```bash
-nix profile install github:YOURUSERNAME/zed_agent
+nix profile install github:tacogips/zed-editor-overlay
 ```
 
 またはインストールせずに実行する：
 
 ```bash
-nix run github:YOURUSERNAME/zed_agent
+nix run github:tacogips/zed-editor-overlay
 ```
 
 ### 自分のFlakeで使用する
@@ -34,7 +34,7 @@ nix run github:YOURUSERNAME/zed_agent
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    zed-overlay.url = "github:YOURUSERNAME/zed_agent";
+    zed-overlay.url = "github:tacogips/zed-editor-overlay";
   };
 
   outputs = { self, nixpkgs, zed-overlay, ... }:

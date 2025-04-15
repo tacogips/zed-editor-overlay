@@ -17,13 +17,13 @@ This repository contains a Nix flake that provides an overlay for the latest ver
 To install Zed Editor directly using this flake:
 
 ```bash
-nix profile install github:YOURUSERNAME/zed_agent
+nix profile install github:tacogips/zed-editor-overlay
 ```
 
 Or run it without installing:
 
 ```bash
-nix run github:YOURUSERNAME/zed_agent
+nix run github:tacogips/zed-editor-overlay
 ```
 
 ### Using in Your Own Flake
@@ -34,7 +34,7 @@ Add this repository as an input in your `flake.nix`:
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    zed-overlay.url = "github:YOURUSERNAME/zed_agent";
+    zed-overlay.url = "github:tacogips/zed-editor-overlay";
   };
 
   outputs = { self, nixpkgs, zed-overlay, ... }:
