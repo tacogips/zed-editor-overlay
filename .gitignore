@@ -1,0 +1,16 @@
+# Nix build outputs
+result
+result-*
+
+# Editor files
+.vscode/
+.idea/
+.DS_Store
+
+# Direnv
+.direnv/
+.envrc
+
+# Cargo files if testing locally
+Cargo.lock
+target/
