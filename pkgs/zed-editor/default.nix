@@ -96,7 +96,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     owner = "zed-industries";
     repo = "zed";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-CHvB3XWG13YQMZbifYH4V37ELeolcOYo9SaskxpsmGc="; # Updated hash for v0.181.8
+    hash = "sha256-gkbiV0kfeM1Ito8jVOBVneNjaXCA4PFayXJLIUmjqn4="; # Updated hash for v0.181.8
   };
   patches = [
     # Upstream delegates linking on Linux to clang to make use of mold,
