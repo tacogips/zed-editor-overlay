@@ -2,7 +2,7 @@
   description = "Zed Editor overlay and installation";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:tacogips/nixpkgs-security/ae36ce5d71747ef2655933b315a361463ea90d82";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
